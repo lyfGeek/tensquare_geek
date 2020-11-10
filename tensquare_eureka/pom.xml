@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tensquare_parent</artifactId>
+        <groupId>com.tensquare</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>tensquare_eureka</artifactId>
+
+    <dependencies>
+        <!-- Eureka 服务端。 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- 打包的名称 例如:app.jar。 -->
+        <finalName>app</finalName>
+        <!-- 插件配置。 -->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- docker 的 maven 插件，官网：
+            https://github.com/spotify/docker-maven-plugin -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+                <!-- 插件配置。 -->
+                <configuration>
+                    <!-- 镜像名称。 -->
+                    <imageName>192.168.142.161:5000/${project.artifactId}:${project.version}
+                    </imageName>
+                    <!-- 基础镜像。 -->
+                    <baseImage>jdk1.8</baseImage>
+                    <entryPoint>["java", "-jar","/${project.build.finalName}.jar"]</entryPoint>
+                    <resources>
+                        <!-- 上传到服务器的位置信息。 -->
+                        <resource>
+                            <!-- 目标目录。 -->
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}
+                            </directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                    <!-- 声明使用 docker 开发的 2375 端口进行上传文件。 -->
+                    <dockerHost>http://192.168.239.128:2375</dockerHost>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

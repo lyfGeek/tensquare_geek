@@ -1,0 +1,24 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: temsquare-manager
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka  # 指定 Eureka 注册地址。
+zuul:
+  routes:
+    tensquare-base:
+      path: /label/**  #拦截路径。
+      serviceId: tensquare-base  # 微服务的名称。
+    tensquare-qa:
+      path: /qa/**
+      serviceId: tensquare-qa
+    tensquare-user:
+      path: /user/**
+      serviceId: tensquare-user
+jwt:
+  config:
+    key: itcast
+    ttl: 3600000

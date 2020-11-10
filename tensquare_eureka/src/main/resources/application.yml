@@ -1,0 +1,8 @@
+server:
+  port: 6868
+eureka:
+  client:
+    register-with-eureka: false  # 是否把本身微服务注册到 Eureka。
+    fetch-registry: false   # 是否从 Eureka 获取注册信息。
+    service-url:
+      defaultZone: http://192.168.239.128:${server.port}/eureka  # 指定 Eureka 注册地址。

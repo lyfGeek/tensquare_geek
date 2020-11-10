@@ -1,0 +1,17 @@
+server:
+  port: 12000
+spring:  # 连接远程 Git 仓库地址。
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/itxwl/javaEEtensquare.git
+  rabbitmq:
+    host: 192.168.33.128
+management:  # 暴露触发消息总线的地址。
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:12000  # 配置中心服务端。
+      name: base  # 应用名称。
+      profile: dev  # 环境代号。
+      label: master  # git 的分支名称。
+  rabbitmq:
+    host: 192.168.33.128

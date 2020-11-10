@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link href="./img/asset-favicon.ico" rel="icon"/>
+    <title>社交-吐槽</title>
+    <!-- 页面 css js -->
+    <!-- <script type="text/javascript" src="../../plugins/sui/sui.min.js"></script> -->
+    <!-- <script type="text/javascript" src="../../plugins/bootstrap/dist/js/bootstrap.js"></script> -->
+    <link href="./plugins/normalize-css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/yui/cssgrids-min.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/sui/sui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/sui/sui-append.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/widget-base.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/widget-head-foot.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/page-sj-spit-detail.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="wrapper">
+    <!-- 引用组件 -->
+    <!-- 头部导航 -->
+    <header>
+        <div class="sui-navbar">
+            <div class="navbar-inner">
+                <a class="sui-brand" href="index-logined.html"><img alt="社交" src="./img/asset-logo-black.png"/></a>
+                <ul class="sui-nav">
+                    <li class="active"><a href="./headline-logined.html">头条</a></li>
+                    <li><a href="./qa-logined.html">问答</a></li>
+                    <li><a href="./activity-index.html">活动</a></li>
+                    <li><a href="./makeFriends-index.html">交友</a></li>
+                    <li><a href="./spit-index.html">吐槽</a></li>
+                    <li><a href="./recruit-index.html">招聘</a></li>
+                </ul>
+                <form class="sui-form sui-form pull-left">
+                    <input placeholder="输入关键词..." type="text"/>
+                    <span class="btn-search fa fa-search"></span>
+                </form>
+                <div class="sui-nav pull-right info">
+                    <li><a class="notice" href="./other-notice.html" target="_blank">通知</a></li>
+                    <li class="hover"><span class="fa fa-plus "></span>
+                        <ul class="hoverinfo">
+                            <li><i aria-hidden="true" class="fa fa-share-alt"></i> <a
+                                    href="./headline-submit.html">去分享</a></li>
+                            <li><i aria-hidden="true" class="fa fa-question-circle"></i> <a href="./qa-submit.html"
+                                                                                            target="_blank">提问题</a></li>
+                            <li><i aria-hidden="true" class="fa fa-comments"></i><a href="./spit-submit.html"
+                                                                                    target="_blank">去吐槽</a></li>
+                            <li><i aria-hidden="true" class="fa fa-heartbeat"></i> <a href="./makeFriends-submit.html"
+                                                                                      target="_blank">发约会</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="homego" href="./person-homepage.html" target="_blank"><img
+                            alt="用户头像" src="./img/widget-photo.png"/></a></li>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 引用组件 -->
+    <!-- 两列布局 -->
+    <div class="wrapper tc-detail">
+        <div class="fl left-list">
+            <div class="tc-detail">
+                <!-- 标题区 -->
+                <div class="detail-tit">
+                    <div class="detail-author">
+                        <a href="javascript:">luckness</a> 发布
+                    </div>
+                    <div class="detail-content">
+                        <p>今天入职腾讯，产品岗，普通非985211大学，上家是不到五十人创业小公司！16年毕业！找内推腾讯给的面试机会，五轮面试！可能是我把运气攒一起了！</p>
+                        <img alt="" src="./img/widget-tc-detail.png"/>
+                    </div>
+                    <div class="detail-tool">
+                        <ul>
+                            <li><span class="star"><i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 53</span></li>
+                            <li><a data-target="#shareModal" data-toggle="modal" href="#"><i aria-hidden="true"
+                                                                                             class="fa fa-share-alt"></i> 44</a>
+                            </li>
+                            <li><a data-target="#remarkModal" data-toggle="modal"><i aria-hidden="true"
+                                                                                     class="fa fa-commenting"></i> 666</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 评论区 -->
+                <div class="comment-area">
+                    <div class="comment-tit">
+                        <span>评论</span>
+                    </div>
+                    <ul class="comment-list">
+                        <li>
+                            <div class="item-photo">
+                                <img alt="" src="./img/widget-widget-photo.png"/>
+                            </div>
+                            <div class="item-content">
+                                <p class="author"><a href="javascript:">luckness</a> 发布</p>
+                                <p class="content">运气+实力吧？不能谦虚哦，沙发！</p>
+                            </div>
+                            <div class="item-thumb">
+                                <div>
+                                    <i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 52
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-photo">
+                                <img alt="" src="./img/widget-widget-photo.png"/>
+                            </div>
+                            <div class="item-content">
+                                <p class="author"><a href="javascript:">luckness</a> 发布</p>
+                                <p class="content">运气+实力吧？不能谦虚哦，沙发！</p>
+                            </div>
+                            <div class="item-thumb">
+                                <div>
+                                    <i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 52
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-photo">
+                                <img alt="" src="./img/widget-widget-photo.png"/>
+                            </div>
+                            <div class="item-content">
+                                <p class="author"><a href="javascript:">luckness</a> 发布</p>
+                                <p class="content">
+                                    内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？内推我吧，条件一样，还要人么？</p>
+                            </div>
+                            <div class="item-thumb">
+                                <div>
+                                    <i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 52
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-photo">
+                                <img alt="" src="./img/widget-widget-photo.png"/>
+                            </div>
+                            <div class="item-content">
+                                <p class="author"><a href="javascript:">luckness</a> 发布</p>
+                                <p class="content">运气+实力吧？不能谦虚哦，沙发！</p>
+                            </div>
+                            <div class="item-thumb">
+                                <div>
+                                    <i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 52
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-photo">
+                                <img alt="" src="./img/widget-widget-photo.png"/>
+                            </div>
+                            <div class="item-content">
+                                <p class="author"><a href="javascript:">luckness</a> 发布</p>
+                                <p class="content">运气+实力吧？不能谦虚哦，沙发！</p>
+                            </div>
+                            <div class="item-thumb">
+                                <div>
+                                    <i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 52
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-photo">
+                                <img alt="" src="./img/widget-widget-photo.png"/>
+                            </div>
+                            <div class="item-content">
+                                <p class="author"><a href="javascript:">luckness</a> 发布</p>
+                                <p class="content">运气+实力吧？不能谦虚哦，沙发！</p>
+                            </div>
+                            <div class="item-thumb">
+                                <div>
+                                    <i aria-hidden="true" class="fa fa-thumbs-o-up"></i> 52
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fl right-tag">
+            <div class="block-btn">
+                <p>来个匿名吐槽，发泄一下你心中的怒火吧！</p>
+                <a class="sui-btn btn-block btn-share" href="./spit-submit.html" target="_blank">发吐槽</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<script src="http://v2.uyan.cc/code/uyan.js" type="text/javascript"></script>
+<script charset="utf-8" src="http://v3.jiathis.com/code/jia.js" type="text/javascript"></script>
+</body>
+</html>

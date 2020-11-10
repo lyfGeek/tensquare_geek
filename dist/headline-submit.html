@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="./img/asset-favicon.ico" rel="icon">
+    <title>社交-提交头条</title>
+
+    <!-- 页面 css js -->
+    <!-- <script type="text/javascript" src="../../plugins/sui/sui.min.js"></script> -->
+
+    <link href="./plugins/normalize-css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/yui/cssgrids-min.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/sui/sui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/sui/sui-append.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/widget-base.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/widget-head-foot.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/page-sj-headline-submit.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- 引用组件 -->
+    <!-- 头部导航 -->
+    <header>
+        <div class="sui-navbar">
+            <div class="navbar-inner">
+                <a class="sui-brand" href="index-logined.html"><img alt="社交" src="./img/asset-logo-black.png"/></a>
+                <ul class="sui-nav">
+                    <li class="active"><a href="./headline-logined.html">头条</a></li>
+                    <li><a href="./qa-logined.html">问答</a></li>
+                    <li><a href="./activity-index.html">活动</a></li>
+                    <li><a href="./makeFriends-index.html">交友</a></li>
+                    <li><a href="./spit-index.html">吐槽</a></li>
+                    <li><a href="./recruit-index.html">招聘</a></li>
+                </ul>
+                <form class="sui-form sui-form pull-left">
+                    <input placeholder="输入关键词..." type="text">
+                    <span class="btn-search fa fa-search"></span>
+                </form>
+                <div class="sui-nav pull-right info">
+                    <li><a class="notice" href="./other-notice.html" target="_blank">通知</a></li>
+                    <li class="hover">
+                        <span class="fa fa-plus "></span>
+                        <ul class="hoverinfo">
+                            <li><i aria-hidden="true" class="fa fa-share-alt"></i> <a
+                                    href="./headline-submit.html">去分享</a></li>
+                            <li><i aria-hidden="true" class="fa fa-question-circle"></i> <a href="./qa-submit.html"
+                                                                                            target="_blank">提问题</a></li>
+                            <li><i aria-hidden="true" class="fa fa-comments"></i><a href="./spit-submit.html"
+                                                                                    target="_blank">去吐槽</a></li>
+                            <li><i aria-hidden="true" class="fa fa-heartbeat"></i> <a href="./makeFriends-submit.html"
+                                                                                      target="_blank">发约会</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="homego" href="./person-homepage.html" target="_blank"><img
+                            alt="用户头像" src="./img/widget-photo.png"></a></li>
+                </div>
+            </div>
+        </div>
+
+    </header>
+</div>
+<div class="tab-nav ">
+    <div class="wrapper">
+        <ul class="fl sui-nav nav-tabs navbar-dark">
+            <li class="active"><a data-toggle="tab" href="#index">首页</a></li>
+            <li><a data-toggle="tab" href="#php">Php</a></li>
+            <li><a data-toggle="tab" href="#js">Javascript </a></li>
+            <li><a data-toggle="tab" href="#python">Python</a></li>
+            <li><a data-toggle="tab" href="#java">Java</a></li>
+        </ul>
+        <span class="fr more"><a href="./qa-allTag.html" target="_blank">更多</a></span>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+<!-- 两列布局 -->
+<div class="wrapper">
+    <div class="submit-headline">
+        <div class="left-box">
+            <h3 class="tit">
+                <span>发布头条</span>
+            </h3>
+            <form class="sui-form form-horizontal">
+                <div class="control-group">
+                    <div class="controls title-input">
+                        <input id="inputEmail" placeholder="标题：不超过30个字符" type="text">
+                    </div>
+                </div>
+                <div class="control-group select">
+                <span class="sui-dropdown dropdown-bordered select">
+                        <span class="dropdown-inner">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="drop12" role="button">
+                            <input name="city" type="hidden" value="hz"><i class="caret"></i><span>全部</span></a>
+                <ul aria-labelledby="drop12" class="sui-dropdown-menu" id="menu12" role="menu">
+                    <li role="presentation"><a href="javascript:void(0);" role="menuitem" tabindex="-1"
+                                               value="bj">前端</a></li>
+                    <li role="presentation"><a href="javascript:void(0);" role="menuitem" tabindex="-1"
+                                               value="sb">后端</a></li>
+                    <li role="presentation"><a href="javascript:void(0);" role="menuitem" tabindex="-1"
+                                               value="sb">iOS</a></li>
+                    <li role="presentation"><a href="javascript:void(0);" role="menuitem" tabindex="-1" value="sb">Android</a></li>
+                    <li role="presentation"><a href="javascript:void(0);" role="menuitem" tabindex="-1"
+                                               value="sb">工具</a></li>
+                </ul>
+                </span>
+                </span>
+                </div>
+                <div class="tags-area">
+                    <div class="input-tags">
+                        <input class="input-xfat input-xxlarge" id="tags" placeholder="标签" type="text">
+                    </div>
+                    <div class="tags-box">
+                        <ul class="sui-tag tag-bordered">
+                            <li class="tag-item">javascript</li>
+                            <li class="tag-item">php</li>
+                            <li class="tag-item">css</li>
+                            <li class="tag-item">html</li>
+                            <li class="tag-item">java</li>
+                            <li class="tag-item">python</li>
+                            <li class="tag-item">html5</li>
+                            <li class="tag-item">node.js</li>
+                            <li class="tag-item">c++</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="editor">
+                    <textarea name="editor1"></textarea>
+                </div>
+                <div class="submit">
+                    <button class="sui-btn btn-xlarge  btn-success" type="submit">提交</button>
+                </div>
+            </form>
+        </div>
+        <div class="right-tips">
+            <h3>发帖指南</h3>
+            <ul>
+                <li>独立思考、自由探索</li>
+                <li>发布的内容和互联网、编程开发、产品设计有关</li>
+                <li>标题能准确描述的内容，不要发重复的内容</li>
+                <li>客观投票，确保你看过这篇内容</li>
+                <li>如果你遇到了具体的编程难题，请到 问答平台 提问</li>
+                <li>保持友善，禁止任何形式的广告、SEO 推广</li>
+                <li>遵循 用户服务条款</li>
+            </ul>
+        </div>
+    </div>
+    <!-- <script>
+        $(function () {
+            $("#tags").focus(function () {
+                $(".tags-box").css("display", "block");
+                $(".tag-item").click(function () {
+                    var text = $(this).text();
+                    $("#tags").before("<span class='tags-detail with-x'>" + text + "<i>×</i></span>");
+                    $(this).css('width', $('.tags-detail').width()+'px');
+                    $(".tags-detail").click(function () {
+                        $(this).remove();
+                    })
+                });
+            });
+
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).click(function () {
+            $(".tags-box").hide();
+        });
+        $(".tags-area").click(function (event) {
+            event.stopPropagation();
+        });
+    </script> -->
+</div>
+<div class="footer">
+    <div class="wrapper">
+        <div class="footer-bottom">
+            <div class="link">
+                <dl>
+                    <dt>网站相关</dt>
+                    <dd>关于我们</dd>
+                    <dd>服务条款</dd>
+                    <dd>帮助中心</dd>
+                    <dd>编辑器语法</dd>
+                </dl>
+                <dl>
+                    <dt>常用链接</dt>
+                    <dd>传智播客</dd>
+                    <dd>传智论坛</dd>
+                </dl>
+                <dl>
+                    <dt>联系我们</dt>
+                    <dd>联系我们</dd>
+                    <dd>加入我们</dd>
+                    <dd>建议反馈</dd>
+                </dl>
+                <dl>
+                    <dt>关注我们</dt>
+                    <dd>微博</dd>
+                    <dd>twitter</dd>
+                </dl>
+
+                <div class="xuke">
+                    <h3>内容许可</h3>
+                    <p>除特别说明外，用户内容均采用知识共享署名-非商业性使用-禁止演绎4.0 国际许可协议 (CC BY-NC-ND 4.0) 进行许可</p>
+                    <p>本站由 传智研究院 提供更新服务</p>
+                </div>
+            </div>
+            <p class="Copyright">Copyright © 2017 传智问答社区 当前版本 0.0.1</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // $(function(){
+    //   $(".hover").hover(function(){
+    //     $(".hoverinfo").stop().animate({
+    //        opacity: "show"
+    //     },"slow");
+    //     $(this).find(".fa-plus").css("color","#e64620");
+    //   },function(){
+    //     $(".hoverinfo").stop().animate({
+    //        opacity: "hide"
+    //     },"slow");
+    //     $(this).find(".fa-plus").css("color","#000");
+    //   })
+    // })
+</script>
+<script src="./plugins/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor1');
+</script>
+</body>
